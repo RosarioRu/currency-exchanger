@@ -4,7 +4,7 @@ export default class Currencies {
   static getCurrency(dollars) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${EUR}/${GBP}/${AMOUNT}`;
+      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${EUR}/${changeTo}/${amount}`;
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
