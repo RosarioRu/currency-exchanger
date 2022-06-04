@@ -8,12 +8,15 @@
     <div class="jumbotron">
       <h1>Welcome to the Currency-Exchanger</h1>
     </div>
-    <label for="amount">Enter the amount in US dollars that you want to convert</label><br>
-    <input id="amount" type="number"><br>
-    <label for="currency-selected">Which currency do you wish to convert it to</label><br>
-    <input id="currency-selected" type="text"><br>
-    <button class="btn-light" id="exchange">Show Converstion</button>
+    <form id="user-inputs">
+      <label for="amount">Enter the amount in US dollars that you want to convert</label><br>
+      <input id="amount" type="number"><br>
+      <label for="currency-selected">Which currency do you wish to convert it to</label><br>
+      <input id="currency-selected" type="text"><br>
+      <button type="submit" class="btn-light">Show Converstion</button>
+    </form>
     <div class="showErrors"></div>
+    <div class="giveErrorComment"></div>
     <div class="showAmount"></div>
   </div>
 </body>

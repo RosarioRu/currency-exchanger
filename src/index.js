@@ -16,13 +16,26 @@ $(document).ready(function() {
     promise.then(function(response) {
       const body = JSON.parse(response);
       $(".showAmount").text(`The amount in ${changeTo} is ${body.conversion_result}`);
+      $(".showErrors").text("");
     }, function (error) {
-      const body = JSON.parse(error)
-      $(".showErrors").text(`Oops, it appears there was an error: ${body["error-type"]}`);
+      const body = JSON.parse(error);
+      const errorType = body["error-type"];
+      // const currencyList = "https://www.exchangerate-api.com/docs/supported-currencies";
+      $(".showErrors").text("Oops, it appears there was an error: " + errorType);
+      if (errorType === "malformed-request") {
+        $(".giveErrorComment").text("Currency entered must be in the form of a three-letter code.");
+      } else if (errorType === "unsupported-code") {
+        $(".giveErrorComment").html("Please review which currencies are supported: " + "<a href='https://www.exchangerate-api.com/docs/supported-currencies'>Supported codes</a>");
+      } else if (errorType === "invalid-key") {
+        $(".giveErrorComment").text("Please double check your key and try again.");
+      }
+      $(".showAmount").text("");
     });
   });
 });
 
+
+// ${body["error-type"]}
 
 
 // $('#weatherLocation').click(function() {
