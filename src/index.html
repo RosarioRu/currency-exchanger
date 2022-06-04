@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-  <title>TEMPLATE</title>
+  <title>Currency Exchanger</title>
 </head>
 <body>
-
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Welcome to the Currency-Exchanger</h1>
+    </div>
+    <label for="amount">Enter the amount in US dollars that you want to convert</label>
+    <input id="amount" type="number"><br>
+    <label for="currency-selected">Which currency do you wish to convert it to</label>
+    <input id="currency-selected" type="text"><br>
+    <button class="btn-success" id="exchange">Show Converstion</button>
+    <div class="showErrors"></div>
+    <div class="showAmount"></div>
+  </div>
 </body>
 </html>
