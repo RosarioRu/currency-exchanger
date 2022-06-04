@@ -1,1 +1,1 @@
-import TemplateClassName from '../src/template.js';
+import Currencies from '../src/currencies.js';
