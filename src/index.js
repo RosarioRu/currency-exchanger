@@ -11,8 +11,15 @@ $(document).ready(function() {
     $("#amount").val("");
     const changeTo = $("#currency-selected").val();
     $("#currency-selected").val("");
+
+    let promise = Currencies.getCurrency(dollars);
+    promise.then(function(response) {
+      const body = JSON.parse(response);
+      $(".showAmount").text(`The amount in ${changeTo} is ${body.conversion_result}`);
+    }, function (error) {
+      $(".showErrors").text("oops");
+    });
   });
-  
 });
 
 
