@@ -20,7 +20,7 @@ module.exports = {
       template: './src/index.html',
       inject: 'body'
     }),
-    new Dotevn()
+    new Dotenv()
   ],
   module: {
     rules: [
