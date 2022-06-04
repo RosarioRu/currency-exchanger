@@ -1,9 +1,16 @@
 /*styling goes here, example for body background color: */
+body {
+  background-color: rgb(225, 225, 204);
+}
 
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  background-color: #749dc5;
+  background-color: rgb(186, 176, 176);
   border-radius: .3rem;
+}
+
+.btn-light {
+  margin-top: 8px;
 }
