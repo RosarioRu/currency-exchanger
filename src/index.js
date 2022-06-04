@@ -17,7 +17,8 @@ $(document).ready(function() {
       const body = JSON.parse(response);
       $(".showAmount").text(`The amount in ${changeTo} is ${body.conversion_result}`);
     }, function (error) {
-      $(".showErrors").text("oops");
+      const body = JSON.parse(error)
+      $(".showErrors").text(`Oops, it appears there was an error: ${body["error-type"]}`);
     });
   });
 });
