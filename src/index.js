@@ -12,7 +12,7 @@ $(document).ready(function() {
     const changeTo = $("#currency-selected").val();
     $("#currency-selected").val("");
 
-    let promise = Currencies.getCurrency(dollars);
+    let promise = Currencies.getCurrency(amount, changeTo);
     promise.then(function(response) {
       const body = JSON.parse(response);
       $(".showAmount").text(`The amount in ${changeTo} is ${body.conversion_result}`);
