@@ -1,6 +1,9 @@
 /*styling goes here, example for body background color: */
 
-/* body {
-  background-color: lightblue;
-} */
-
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  background-color: #749dc5;
+  border-radius: .3rem;
+}
