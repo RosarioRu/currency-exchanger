@@ -2,7 +2,7 @@
 
 #### By _**Rosario Ruvalcaba**_
 
-#### _This program takes user input for USD amount and the currency they wish to convert it to, then returns the converted amount in that currency. The program makes an API call to https://www.exchangerate-api.com/ in order to convert the currency with up-to-date exchange rates._
+#### _This program takes user input for USD amount and the currency they wish to convert it to, then returns the converted amount in that currency. The program makes an API call to ExchangeRate-API in order to convert the currency with up-to-date exchange rates._
 
 ## Technologies Used
 
