@@ -19,11 +19,33 @@ body {
   font-variant: small-caps;
 }
 
+#user-inputs {
+  font-weight: 500;
+  box-sizing: border-box;
+  width: 45%;
+  height: 250px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  float: left;
+  border: solid 1px black;
+  background-color: rgba(227, 227, 196, 0.7);
+}
 .btn-light {
   margin-top: 8px;
 }
 
-/* body {
-  background-image:url("../img/robot.jpg");
-  color:grey;
-} */
+.display-box {
+  font-weight: 500;
+  display: none;
+  box-sizing: border-box;
+  width: 45%;
+  height: 250px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  float: right;
+  border: solid 1px black;
+  background-color: rgba(227, 227, 196, 0.7);
+}
+
