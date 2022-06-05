@@ -8,6 +8,8 @@ function clearFields() {
   $(".showAmount").text("");
   $(".showErrors").text("");
   $(".giveErrorComment").text("");
+  $("#amount").val("");
+  $("#currency-selected").val("");
 }
 
 
@@ -15,10 +17,8 @@ $(document).ready(function() {
   $("form#user-inputs").submit(function() {
     event.preventDefault();
     const amount = parseFloat($("#amount").val());
-    $("#amount").val("");
     const changeTo = $("#currency-selected").val();
-    $("#currency-selected").val("");
-
+    
     clearFields();
 
     let promise = Currencies.getCurrency(amount, changeTo);
