@@ -22,7 +22,7 @@ body {
 #user-inputs {
   font-weight: 500;
   box-sizing: border-box;
-  width: 45%;
+  width: 50%;
   height: 250px;
   margin: auto;
   margin-top: 30px;
@@ -49,3 +49,22 @@ body {
   background-color: rgba(227, 227, 196, 0.7);
 }
 
+.examples {
+  display:inline-table;
+  font-weight: 500;
+  box-sizing: border-box;
+  width: 60%;;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  border: solid 1px black;
+  background-color: rgba(227, 227, 196, 0.7);
+}
+
+.examples h4 {
+  font-size: medium;
+}
+
+.examples li {
+  font-size: smaller;
+}

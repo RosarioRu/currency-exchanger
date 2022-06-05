@@ -11,14 +11,23 @@
     <form id="user-inputs">
       <label for="amount">Enter the amount in US dollars that you want to convert</label><br>
       <input id="amount" type="number" step="0.01" min="0"><br>
-      <label for="currency-selected">Which currency do you wish to convert it to</label><br>
+      <label for="currency-selected">Which currency do you wish to convert it to (enter as 3-letter currency code)</label><br>
       <input id="currency-selected" type="text"><br>
       <button type="submit" class="btn-light">Show Convertion</button>
     </form>
-    <div class="display-box">
+     <div class="display-box">
       <div class="showErrors"></div>
       <div class="giveErrorComment"></div>
       <div class="showAmount"></div>
+    </div>
+    <div class="examples">
+      <h4>Examples of common currency codes</h4>
+      <ul>
+        <li>EUR, European Union Euro</li>
+        <li>CAD, Canadian Dollar</li>
+        <li>MXN, Mexican Peso</li>
+        <li>RUB, Russian Ruble</li>
+        <li>CNY, Chinese Renminbi</li>
     </div>
   </div>
 </body>
