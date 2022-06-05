@@ -38,7 +38,9 @@ _The project utilizes a .env file which is listed in the .gitignore file in orde
 
 * _Store your ExchangeRate API key in the .env file. Ddon't use quotes or backticks. Simply enter the key after creating a variable to hold it followed by an equals sign. Make sure to name it API\_KEY so the embedded expressions in the file 'src/currencies-service.js' work properly (or update the code to the name you choose if you want to call your API key something else). Here is an example with a fake key: API_KEY=01010101010101010110101_
 
-* _Using your terminal, navigate to the root level of the cloned project's directory and enter: $ npm install. This will install the dependencies required for this project. It will also create the nodes_modules directory which will contain the actual packages and dependencies, as well as a list of these downloads in the package-lock.json file._
+* _Navigate to the root level of the project directory and enter the coammand: $ npm install dotenv-webpack@2.0.0 --save-dev_
+
+* _Next enter: $ npm install. This will install the dependencies required for this project. It will also create the nodes_modules directory which will contain the actual packages and dependencies, as well as a list of these downloads in the package-lock.json file._
 
 * _Next enter the command $ npm run build. This will bundle all the code into the dist directory inside the bundle.js file. A file called index.html will also be created in this directory, which you can open by right-clicking and selecting 'Open With Live Server.' This is how you can view the page for the project._
 
