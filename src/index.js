@@ -7,10 +7,13 @@ import Currencies from './currencies-service.js';
 $(document).ready(function() {
   $("form#user-inputs").submit(function() {
     event.preventDefault();
-    const amount = $("#amount").val();
+    const amount = parseFloat($("#amount").val());
     $("#amount").val("");
     const changeTo = $("#currency-selected").val();
     $("#currency-selected").val("");
+
+    console.log("the amount entered is " + amount);
+    console.log("data type is " + typeof amount);
 
     let promise = Currencies.getCurrency(amount, changeTo);
     promise.then(function(response) {
