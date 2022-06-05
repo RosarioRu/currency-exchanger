@@ -4,6 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Currencies from './currencies-service.js';
 
+function clearFields() {
+  $(".showAmount").text("");
+  $(".showErrors").text("");
+  $(".giveErrorComment").text("");
+}
+
+
 $(document).ready(function() {
   $("form#user-inputs").submit(function() {
     event.preventDefault();
@@ -12,16 +19,17 @@ $(document).ready(function() {
     const changeTo = $("#currency-selected").val();
     $("#currency-selected").val("");
 
+    clearFields();
 
     let promise = Currencies.getCurrency(amount, changeTo);
     promise.then(function(response) {
       const body = JSON.parse(response);
-      
+      $(".display-box").show();
       $(".showAmount").text(`The amount in ${changeTo} is ${body.conversion_result.toFixed(2)}`);
-      $(".showErrors").text("");
     }, function (error) {
       const body = JSON.parse(error);
       const errorType = body["error-type"];
+      $(".display-box").show();
       $(".showErrors").text("Oops, it appears there was an error: " + errorType);
       if (errorType === "malformed-request") {
         $(".giveErrorComment").text("Currency entered must be in the form of a three-letter code.");
@@ -30,29 +38,7 @@ $(document).ready(function() {
       } else if (errorType === "invalid-key") {
         $(".giveErrorComment").text("Please double check your key and try again.");
       }
-      $(".showAmount").text("");
     });
   });
 });
 
-
-// ${body["error-type"]}
-
-
-// $('#weatherLocation').click(function() {
-//   let city = $('#location').val();
-//   $('#location').val("");
-
-//   let promise = new Promise(function(resolve, reject) {
-//     let request = new XMLHttpRequest();
-//     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
-//     request.onload = function() {
-//       if (this.status === 200) {
-//         resolve(request.response);
-//       } else {
-//         reject(request.response);
-//       }
-//     }
-//     request.open("GET", url, true);
-//     request.send();
-//   });
