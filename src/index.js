@@ -18,7 +18,8 @@ $(document).ready(function() {
     let promise = Currencies.getCurrency(amount, changeTo);
     promise.then(function(response) {
       const body = JSON.parse(response);
-      $(".showAmount").text(`The amount in ${changeTo} is ${body.conversion_result}`);
+      
+      $(".showAmount").text(`The amount in ${changeTo} is ${body.conversion_result.toFixed(2)}`);
       $(".showErrors").text("");
     }, function (error) {
       const body = JSON.parse(error);
