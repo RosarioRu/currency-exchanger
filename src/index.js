@@ -12,8 +12,6 @@ $(document).ready(function() {
     const changeTo = $("#currency-selected").val();
     $("#currency-selected").val("");
 
-    console.log("the amount entered is " + amount);
-    console.log("data type is " + typeof amount);
 
     let promise = Currencies.getCurrency(amount, changeTo);
     promise.then(function(response) {
@@ -24,7 +22,6 @@ $(document).ready(function() {
     }, function (error) {
       const body = JSON.parse(error);
       const errorType = body["error-type"];
-      // const currencyList = "https://www.exchangerate-api.com/docs/supported-currencies";
       $(".showErrors").text("Oops, it appears there was an error: " + errorType);
       if (errorType === "malformed-request") {
         $(".giveErrorComment").text("Currency entered must be in the form of a three-letter code.");
