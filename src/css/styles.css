@@ -1,16 +1,29 @@
 /*styling goes here, example for body background color: */
 body {
-  background-color: rgb(225, 225, 204);
+  background-image:url("https://images.pexels.com/photos/106152/euro-coins-currency-money-106152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(179, 204, 227);
 }
 
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  background-color: rgb(186, 176, 176);
+  background-image: linear-gradient(#f5dea9, rgb(197, 197, 182));
   border-radius: .3rem;
+  border: dashed 4px rgb(128, 118, 64);
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-variant: small-caps;
 }
 
 .btn-light {
   margin-top: 8px;
 }
+
+/* body {
+  background-image:url("../img/robot.jpg");
+  color:grey;
+} */
