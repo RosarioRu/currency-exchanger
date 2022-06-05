@@ -25,7 +25,11 @@ $(document).ready(function() {
     promise.then(function(response) {
       const body = JSON.parse(response);
       $(".display-box").show();
-      $(".showAmount").text(`The amount in ${changeTo} is ${body.conversion_result.toFixed(2)}`);
+      if (body.conversion_result === undefined) {
+        $(".showAmount").text("Please enter a non-zero amount.");
+      } else {
+        $(".showAmount").text(`The amount in ${changeTo} is ${body.conversion_result.toFixed(2)}`);
+      }
     }, function (error) {
       const body = JSON.parse(error);
       const errorType = body["error-type"];
