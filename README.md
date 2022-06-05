@@ -46,8 +46,6 @@ _The project utilizes a .env file which is listed in the .gitignore file in orde
 
 * _The live-server shoud now be ready to take user input and display currency exchange results._
 
-* _(See Github page for this project](https://rosarioru.github.io/UPDATE/)_
-
 ## Known Bugs
 
 * _No known bugs_
